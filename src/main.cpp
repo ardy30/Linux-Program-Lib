@@ -2,8 +2,8 @@
 #include <signal.h>
 #include <cstdlib>
 #include <string>
-#include "linux_program_libs/log/log.h"
-#include "linux_net_framework/component/Basic_config_manager.h"
+#include "../linux_program_libs/log/log.h"
+#include "../linux_net_framework/component/Basic_config_manager.h"
 #include "System_config_manager.h"
 #include "Main_body.h"
 

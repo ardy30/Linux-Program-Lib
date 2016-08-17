@@ -2,8 +2,8 @@
 #define __SYSTEM_CONFIG_MANAGER__
 
 #include <string>
-#include "linux_program_libs/utils/Singleton.h"
-#include "linux_program_libs/xml/Xml.h"
+#include "../linux_program_libs/utils/Singleton.h"
+#include "../linux_program_libs/xml/Xml.h"
 
 class System_config_manager: public HVN::Singleton<System_config_manager>
 {

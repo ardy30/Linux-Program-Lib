@@ -1,6 +1,6 @@
 #include <iostream>
-#include "linux_program_libs/log/log.h"
-#include "linux_program_libs/utils/Type_convertor.h"
+#include "../linux_program_libs/log/log.h"
+#include "../linux_program_libs/utils/Type_convertor.h"
 #include "System_config_manager.h"
 
 int System_config_manager::initial(std::string xml_file)

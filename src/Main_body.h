@@ -1,9 +1,9 @@
 #ifndef __MAIN_BODY_H__
 #define __MAIN_BODY_H__
 
-#include "linux_program_libs/utils/Singleton.h"
-#include "linux_program_libs/pthread/Thread.h"
-#include "linux_program_libs/pthread/Mutex_Cond.h"
+#include "../linux_program_libs/utils/Singleton.h"
+#include "../linux_program_libs/pthread/Thread.h"
+#include "../linux_program_libs/pthread/Mutex_Cond.h"
 
 class Main_body: public HVN::Singleton<Main_body>
 {

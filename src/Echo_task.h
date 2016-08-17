@@ -2,7 +2,7 @@
 #define __ECHO_TASK_H__
 
 #include <string>
-#include "linux_net_framework/common/Task.h"
+#include "../linux_net_framework/common/Task.h"
 
 class Echo_task: public Task
 {

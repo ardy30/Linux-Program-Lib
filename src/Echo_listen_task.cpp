@@ -1,7 +1,7 @@
 #include <cassert>
 #include <tr1/functional>
-#include "linux_program_libs/log/log.h"
-#include "linux_net_framework/common/Task_factory.h"
+#include "../linux_program_libs/log/log.h"
+#include "../linux_net_framework/common/Task_factory.h"
 #include "Echo_listen_task.h"
 #include "Echo_task.h"
 

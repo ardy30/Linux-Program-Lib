@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 #include <tr1/functional>
-#include "linux_program_libs/log/log.h"
-#include "linux_net_framework/common/Task_factory.h"
-#include "linux_net_framework/component/Middle_server_task.h"
+#include "../linux_program_libs/log/log.h"
+#include "../linux_net_framework/common/Task_factory.h"
+#include "../linux_net_framework/component/Middle_server_task.h"
 #include "Echo_task.h"
 
 int Echo_task::initial(void *arg, std::tr1::function<void (Task *, int, void *)> result_cb_obj)
