@@ -1,18 +1,32 @@
-INCLUDE_DIRECTORIES(BEFORE /usr/include)
+include_directories(BEFORE /usr/include/libxml2)
+#aux_source_directory(. SRC_LIST)
 
-AUX_SOURCE_DIRECTORY(. SRC_LIST)
-ADD_EXECUTABLE(hello ${SRC_LIST})
-#add_library(hello STATIC ${SRC_LIST})
+set(SRC_LIST 
+    ./common/Timer.cpp
+    ./common/Scheduler.cpp
+    ./common/Task.cpp
+    ./common/Sock_nh.cpp
+    ./common/Sock.cpp
+    ./common/Listener.cpp
+    ./common/Task_factory.cpp
+    ./component/Middle_server_task.cpp
+    ./component/Persist_timer_task.cpp
+    ./component/Thread_pool.cpp
+    ./component/Basic_config_manager.cpp
+    )
+
+#add_executable(hello ${SRC_LIST})
+add_library(linux_net_framework STATIC ${SRC_LIST})
 #add_library(hello SHARED ${SRC_LIST})
 
-#LINK_DIRECTORIES(directory1 directory2)
-#TARGET_LINK_LIBRARIES(hello lib.a lib.so)
+#link_directories(directory1 directory2)
+#target_link_libraries(linux_net_framework libxml2)
 
-#ADD_DEFINITIONS(-DDEBUG -DABC)
+#add_definitions(-DDEBUG -DABC)
 
-#ADD_DEPENDENCIES(target-name depend-target1 depend-target2)
+#add_dependencies(target-name depend-target1 depend-target2)
 
-INSTALL(TARGETS hello RUNTIME DESTINATION bin)
+install(TARGETS linux_net_framework ARCHIVE DESTINATION lib)
 
 
 

@@ -22,6 +22,7 @@
 #include <sys/types.h>
 #include <sys/time.h>
 #include <sys/timeb.h>
+#include <stdint.h>
 #include <ctime>
 #include <string>
 

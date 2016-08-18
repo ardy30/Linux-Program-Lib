@@ -1,18 +1,25 @@
-INCLUDE_DIRECTORIES(BEFORE /usr/include)
+include_directories(BEFORE /usr/include/libxml2)
+aux_source_directory(. SRC_LIST)
 
-AUX_SOURCE_DIRECTORY(. SRC_LIST)
-ADD_EXECUTABLE(hello ${SRC_LIST})
-#add_library(hello STATIC ${SRC_LIST})
+add_executable(echo_exam ${SRC_LIST})
+#add_library(linux_program_libs STATIC ${SRC_LIST})
 #add_library(hello SHARED ${SRC_LIST})
 
-#LINK_DIRECTORIES(directory1 directory2)
-#TARGET_LINK_LIBRARIES(hello lib.a lib.so)
+#link_directories(directory1 directory2)
+target_link_libraries(echo_exam 
+    linux_program_libs 
+    linux_net_framework
+    librt.so 
+    libpthread.so 
+    libxml2.so 
+    libevent.so 
+    )
 
-#ADD_DEFINITIONS(-DDEBUG -DABC)
+#add_definitions(-DDEBUG -DABC)
 
-#ADD_DEPENDENCIES(target-name depend-target1 depend-target2)
+#add_dependencies(target-name depend-target1 depend-target2)
 
-INSTALL(TARGETS hello RUNTIME DESTINATION bin)
+install(TARGETS echo_exam RUNTIME DESTINATION bin)
 
 
 
