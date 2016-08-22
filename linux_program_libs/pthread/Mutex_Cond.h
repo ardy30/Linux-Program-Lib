@@ -131,7 +131,7 @@ public:
         while(!this->m_wait)
             this->m_cond.wait();
         if(!--this->m_wait_count)
-        this->m_wait = 0;
+            this->m_wait = 0;
     }   
 
     void notify(void)
